@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MySql Freamwork Project Web</title>
+    <link rel="stylesheet" href="/prox/html/assets/css/backend.min.css">
+    <link rel="stylesheet" href="/prox/html/assets/vendor/fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/Content/icons/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/prox/html/assets/vendor/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="/prox/html/assets/vendor/icon/dripicons/dripicons.css">
+    <link rel="stylesheet" href="/Content/icons/flaticon/flaticon.css">
+    <link rel="stylesheet" href="/Content/icons/flaticon_1/flaticon_1.css">
+
+    <link rel='stylesheet' href="/prox/html/assets/vendor/fullcalendar/core/main.css" />
+    <link rel='stylesheet' href="/prox/html/assets/vendor/fullcalendar/daygrid/main.css" />
+    <link rel='stylesheet' href="/prox/html/assets/vendor/fullcalendar/timegrid/main.css" />
+    <link rel='stylesheet' href="/prox/html/assets/vendor/fullcalendar/list/main.css" />
+    <link rel="stylesheet" href="/prox/html/assets/vendor/mapbox/mapbox-gl.css">
+    @RenderSection("Heads", required: false)
+</head>
+<body>
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <div class="iq-sidebar  sidebar-default ">
+            <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
+                <a href="index.html" class="header-logo">
+                    <img src="~/prox/html/assets/images/logo.png" class="img-fluid rounded-normal" alt="logo">
+                </a>
+                <div class="iq-menu-bt-sidebar">
+                    <i class="las la-bars wrapper-menu"></i>
+                </div>
+            </div>
+            <div class="data-scrollbar" data-scroll="1">
+                <nav class="iq-sidebar-menu">
+                    <ul id="iq-sidebar-toggle" class="iq-menu">
+
+                        <li class=" ">
+                            <a href="#widget" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <i class="las la-users-cog iq-arrow-left"></i><span>Kullanıcı Bilgileri</span>
+                                <i class="las la-plus iq-arrow-right arrow-active"></i>
+                                <i class="las la-minus iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="widget" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+
+                                <li class=" ">
+                                    <a href="/kullanici-listele">
+                                        <i class="las la-users"></i><span>Kullanıcı Listele</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/yeni-kullanici-ekle">
+                                        <i class="las la-user-plus"></i><span>Kullanıcı Ekle</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="p-3"></div>
+            </div>
+        </div>
+        <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
+                        <i class="ri-menu-line wrapper-menu"></i>
+                        <a href="index.html" class="header-logo">
+                            <img src="/prox/html/assets/images/logo.png" class="img-fluid rounded-normal" alt="logo">
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                            <i class="ri-menu-3-line"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="change-mode">
+                                <div class="custom-control custom-switch custom-switch-icon custom-control-inline">
+                                    <div class="custom-switch-inner">
+                                        <p class="mb-0"> </p>
+                                        <input type="checkbox" class="custom-control-input" id="dark-mode" data-active="true">
+                                        <label class="custom-control-label" for="dark-mode" data-mode="toggle">
+                                            <span class="switch-icon-left"><i class="a-left"></i></span>
+                                            <span class="switch-icon-right"><i class="a-right"></i></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="content-page">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper End-->
+    <footer class="iq-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Copyright © Designed &amp; Developed by Hasan Doğdu @DateTime.Now.Year</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Backend Bundle JavaScript -->
+    <script src="/prox/html/assets/js/backend-bundle.min.js"></script>
+
+    <!-- Flextree Javascript-->
+    <script src="/prox/html/assets/js/flex-tree.min.js"></script>
+    <script src="/prox/html/assets/js/tree.js"></script>
+
+    <!-- Table Treeview JavaScript -->
+    <script src="/prox/html/assets/js/table-treeview.js"></script>
+
+    <!-- Masonary Gallery Javascript -->
+    <script src="/prox/html/assets/js/masonry.pkgd.min.js"></script>
+    <script src="/prox/html/assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Mapbox Javascript -->
+    <script src="/prox/html/assets/js/mapbox-gl.js"></script>
+    <script src="/prox/html/assets/js/mapbox.js"></script>
+
+    <!-- Fullcalender Javascript -->
+    <script src="/prox/html/assets/vendor/fullcalendar/core/main.js"></script>
+    <script src="/prox/html/assets/vendor/fullcalendar/daygrid/main.js"></script>
+    <script src="/prox/html/assets/vendor/fullcalendar/timegrid/main.js"></script>
+    <script src="/prox/html/assets/vendor/fullcalendar/list/main.js"></script>
+
+    <!-- SweetAlert JavaScript -->
+    <script src="/prox/html/assets/js/sweetalert.js"></script>
+
+    <!-- Vectoe Map JavaScript -->
+    <script src="/prox/html/assets/js/vector-map-custom.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script src="/prox/html/assets/js/customizer.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script src="/prox/html/assets/js/chart-custom.js"></script>
+
+    <!-- slider JavaScript -->
+    <script src="/prox/html/assets/js/slider.js"></script>
+
+    <!-- app JavaScript -->
+    <script src="/prox/html/assets/js/app.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
